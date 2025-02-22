@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { Droplets } from "lucide-react";
+import { Droplet } from "lucide-react";
 import { useEffect } from "react";
+
 interface LoadingScreenProps {
   onAnimationComplete: () => void;
 }
@@ -30,8 +31,8 @@ const LoadingScreen = ({ onAnimationComplete }: LoadingScreenProps) => {
           transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1], delay: 0.2 }}
           className="relative z-10"
         >
-          <div className="bg-gradient-to-r from-sky-400 to-blue-600 text-primary-foreground p-20 rounded-[4rem] shadow-2xl">
-            <Droplets className="w-52 h-52" />
+          <div className="bg-primary text-primary-foreground p-20 rounded-[4rem] shadow-2xl">
+            <Droplet className="w-52 h-52" />
           </div>
         </motion.div>
 
@@ -40,7 +41,7 @@ const LoadingScreen = ({ onAnimationComplete }: LoadingScreenProps) => {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: [0.8, 1.1, 1], opacity: [0, 0.2, 0.1] }}
           transition={{ duration: 2, ease: "easeOut", delay: 0.4, times: [0, 0.7, 1] }}
-          className="absolute inset-0 blur-[100px] bg-gradient-to-r from-sky-400 to-blue-600 rounded-[4rem]"
+          className="absolute inset-0 blur-[100px] bg-primary rounded-[4rem]"
         />
 
         {/* Additional Pulsing Effect */}
@@ -48,7 +49,7 @@ const LoadingScreen = ({ onAnimationComplete }: LoadingScreenProps) => {
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.15, 0.1] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute inset-0 blur-[80px] bg-gradient-to-r from-sky-400 to-blue-600/30 rounded-[4rem]"
+          className="absolute inset-0 blur-[80px] bg-primary/30 rounded-[4rem]"
         />
       </div>
     </motion.div>
