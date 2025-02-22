@@ -12,12 +12,13 @@ import Image from "next/image";
 const Header = () => {
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const navItems = [
     { label: "Home", href: "" },
-    { label: "FAQs", href: "#faqs" },
+    { label: "FAQs", href: "#faq" },
     { label: "Contact", href: "#contact" },
-    { label: "Recognitions", href: "#logo" },
+    { label: "Recognitions", href: "#logos" },
     { label: "About Us", href: "#about" },
   ];
 
@@ -75,7 +76,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       <motion.div
-        className="flex lg:hidden fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-gray-200 z-50"
+        className="flex lg:hidden fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-gray-200 z-50 mx-4 flex-row self-center items-center justify-between mt-2 border rounded-full"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -85,7 +86,7 @@ const Header = () => {
             <span className="font-medium text-black text-base">Aquapulse</span>
           </Link>
 
-          <Sheet>
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="lg:hidden">
                 <Menu className="h-5 w-5" />
@@ -106,6 +107,7 @@ const Header = () => {
                   <Link
                     key={item.label}
                     href={item.href}
+                    onClick={() => setIsSheetOpen(false)}
                     className="text-lg font-medium text-gray-600 hover:text-black transition-all duration-200 px-2 py-1.5 rounded-lg hover:bg-gray-100"
                   >
                     {item.label}
@@ -114,7 +116,8 @@ const Header = () => {
                 <div className="flex flex-col gap-3 mt-4">
                   <Link
                     href="#contact"
-                    className="w-full  text-white bg-gradient-to-r from-sky-400 to-blue-600 px-4 py-2 text-center text-sm font-semibold rounded-full border border-gray-200 hover:border-gray-300 transition-all duration-200"
+                    onClick={() => setIsSheetOpen(false)}
+                    className="w-full text-white bg-gradient-to-r from-sky-400 to-blue-600 px-4 py-2 text-center text-sm font-semibold rounded-full border border-gray-200 hover:border-gray-300 transition-all duration-200"
                   >
                     Contact Us
                   </Link>
