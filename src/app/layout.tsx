@@ -42,9 +42,9 @@ export default function RootLayout({
           "debug-screens": process.env.NODE_ENV === "development",
         })}
       >
-        {/* <InitialLoadingProvider> */}
-        {children}
-        {/* </InitialLoadingProvider> */}
+        <InitialLoadingProvider>
+          {children}
+        </InitialLoadingProvider>
         <Analytics />
       </body>
     </html>
