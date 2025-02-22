@@ -10,8 +10,32 @@ const inter = Inter({
   weight: "600"
 });
 export const metadata: Metadata = {
-  title: "NextJs 15",
-  description: "Nextjs 15 starter template",
+  title: 'Aquapulse - Sustainable Aquaculture Solutions',
+  description: 'Pioneering aquaculture with sustainable innovations to revolutionize the seafood industry.',
+  openGraph: {
+    title: 'Aquapulse - Sustainable Aquaculture Solutions',
+    description: 'Leveraging advanced technologies to enhance sustainability and efficiency in aquaculture.',
+    url: 'https://www.aquapulse.co.in/',
+    siteName: 'Aquapulse',
+    images: [
+      {
+        url: 'https://www.aquapulse.co.in/og-image.png', // Replace with the actual image URL
+        width: 800,
+        height: 600,
+        alt: 'Aquapulse - Sustainable Aquaculture Solutions',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Aquapulse - Sustainable Aquaculture Solutions',
+    description: 'Innovative solutions for a thriving blue food economy.',
+    site: '@aquapulse', // Replace with the actual Twitter handle
+    creator: '@aquapulse', // Replace with the actual Twitter handle
+    images: ['https://www.aquapulse.co.in/twitter-image.png'], // Replace with the actual image URL
+  },
 };
 
 export default function RootLayout({
