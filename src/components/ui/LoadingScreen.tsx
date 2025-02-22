@@ -31,8 +31,8 @@ const LoadingScreen = ({ onAnimationComplete }: LoadingScreenProps) => {
           transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1], delay: 0.2 }}
           className="relative z-10"
         >
-          <div className="bg-gradient-to-r from-sky-400 to-blue-600 text-primary-foreground p-20 rounded-[4rem] shadow-2xl">
-            <Image src="/aqua/logo.svg" alt="logo" width={200} height={200} className="w-[208px] h-[208px]" />
+          <div className="bg-gradient-to-r from-sky-400 to-blue-600 text-primary-foreground p-10 rounded-[4rem] shadow-2xl">
+            <Image src="/aqua/logo.svg" alt="logo" width={150} height={150} className="w-[150px] h-[150]" />
           </div>
         </motion.div>
 
