@@ -1,8 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { Calendar } from "lucide-react";
+import { Droplets } from "lucide-react";
 import { useEffect } from "react";
-import Image from "next/image";
 interface LoadingScreenProps {
   onAnimationComplete: () => void;
 }
@@ -31,8 +30,8 @@ const LoadingScreen = ({ onAnimationComplete }: LoadingScreenProps) => {
           transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1], delay: 0.2 }}
           className="relative z-10"
         >
-          <div className="bg-gradient-to-r from-sky-400 to-blue-600 text-primary-foreground p-10 rounded-[4rem] shadow-2xl">
-            <Image src="/aqua/logo.svg" alt="logo" width={150} height={150} className="w-[150px] h-[150]" />
+          <div className="bg-gradient-to-r from-sky-400 to-blue-600 text-primary-foreground p-20 rounded-[4rem] shadow-2xl">
+            <Droplets className="w-52 h-52" />
           </div>
         </motion.div>
 
