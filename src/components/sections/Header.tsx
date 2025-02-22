@@ -1,21 +1,24 @@
 "use client"
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import { Calendar, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-export default function Header() {
+
+
+const Header = () => {
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
-    { label: "FAQs", href: "/faqs" },
-    { label: "Contact", href: "/contact" },
-    { label: "Recognitions", href: "/recognitions" },
+    { label: "Home", href: "" },
+    { label: "FAQs", href: "#faqs" },
+    { label: "Contact", href: "#contact" },
+    { label: "Recognitions", href: "#logo" },
+    { label: "About Us", href: "#about" },
   ];
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -23,90 +26,106 @@ export default function Header() {
   });
 
   return (
-    <motion.header
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="sticky top-0 z-50 p-0 bg-background/60 backdrop-blur"
+    <motion.div
+      className="w-full fixed top-2 inset-x-0 z-50"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
     >
-      <div className="flex justify-between items-center container mx-auto p-2">
-        <Link
-          href="/"
-          title="brand-logo"
-          className="relative mr-6 flex items-center space-x-2 hover:opacity-80 transition-opacity"
-        >
-          <Calendar className="w-6 h-6" />
-          <span className="font-bold text-xl">Cal AI</span>
+      {/* Desktop Navigation */}
+      <motion.div
+        className="hidden lg:flex max-w-5xl mx-auto flex-row self-center items-center justify-between py-3 border border-[#E5E5E5] px-8 rounded-full relative z-[100]"
+        style={{
+          width: "80%",
+          backgroundColor: "rgba(255, 255, 255, 0.5)",
+          backdropFilter: "blur(5px)",
+        }}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        {/* Logo */}
+        <Link href="/" className="font-normal flex gap-2 justify-center items-center text-sm text-black px-2 py-1 shrink-0 relative z-20">
+          <Image src="/aqua/logo.svg" alt="logo" width={40} height={20} />
+          <span className="font-medium text-black text-lg">Aquapulse</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-8">
+        {/* Navigation Links */}
+        <div className="lg:flex flex-row flex-1 items-center justify-center space-x-6 text-sm">
           {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
-              {item.label}
-            </Link>
+            <div key={item.label} className="relative">
+              <Link
+                href={item.href}
+                className="text-black/90 relative px-3 py-1.5 transition-colors hover:text-black font-medium"
+              >
+                <span className="relative z-10">{item.label}</span>
+              </Link>
+            </div>
           ))}
-          <Button
-            asChild
-            size="sm"
-            className="rounded-full"
-          >
-            <Link href="#">Get Started</Link>
-          </Button>
-        </nav>
+        </div>
 
-        {/* Mobile Navigation */}
-        <div className="block lg:hidden">
+        {/* Action Buttons */}
+        <div className="flex items-center gap-3">
+          <Link
+            href="#contact"
+            className="px-4 py-2 bg-gradient-to-r from-sky-400 to-blue-600 text-white text-sm font-semibold rounded-full border border-gray-200 hover:border-gray-300 transition-all duration-200"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </motion.div>
+
+      {/* Mobile Navigation */}
+      <motion.div
+        className="flex lg:hidden fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-gray-200 z-50"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <div className="flex justify-between items-center w-full px-4 py-3">
+          <Link href="/" className="flex items-center gap-2">
+            <Image src="/aqua/logo.svg" alt="logo" width={32} height={16} />
+            <span className="font-medium text-black text-base">Aquapulse</span>
+          </Link>
+
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+              <Button variant="ghost" size="icon" className="lg:hidden">
+                <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side={"bottom"}>
-              <SheetTitle>
-                <Link
-                  href="/"
-                  title="brand-logo"
-                  className="relative mr-6 flex items-center space-x-2 hover:opacity-80 transition-opacity"
-                >
-                  <Calendar className="w-6 h-6" />
-                  <span className="font-bold text-xl">Cal AI</span>
-                </Link>
-              </SheetTitle>
-              <div className="flex flex-col space-y-4 mt-8">
+            <SheetContent side="right" className="w-[280px] sm:w-[350px]">
+              <SheetHeader>
+                <SheetTitle>
+                  <Link href="/" className="font-normal flex gap-2 justify-start items-center text-sm text-black py-1 shrink-0 relative z-20">
+                    <Image src="/aqua/logo.svg" alt="logo" width={40} height={20} />
+                    <span className="font-medium text-black text-lg">Aquapulse</span>
+                  </Link>
+                </SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col gap-4 mt-8">
                 {navItems.map((item) => (
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                    className="text-lg font-medium text-gray-600 hover:text-black transition-all duration-200 px-2 py-1.5 rounded-lg hover:bg-gray-100"
                   >
                     {item.label}
                   </Link>
                 ))}
-                <Button
-                  asChild
-                  className="rounded-full w-full"
-                >
-                  <Link href="#">Get Started</Link>
-                </Button>
-              </div>
+                <div className="flex flex-col gap-3 mt-4">
+                  <Link
+                    href="#contact"
+                    className="w-full  text-white bg-gradient-to-r from-sky-400 to-blue-600 px-4 py-2 text-center text-sm font-semibold rounded-full border border-gray-200 hover:border-gray-300 transition-all duration-200"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+              </nav>
             </SheetContent>
           </Sheet>
         </div>
-      </div>
-
-      <motion.hr
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isScrolled ? 1 : 0 }}
-        transition={{ duration: 0.2 }}
-        className="absolute w-full bottom-0"
-      />
-    </motion.header>
+      </motion.div>
+    </motion.div>
   );
-}
+};
+
+export default Header;

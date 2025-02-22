@@ -2,42 +2,44 @@
 import { Calendar, ChevronRight } from "lucide-react";
 import { Marquee } from "@/components/magicui/marquee";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
 
 const testimonials = [
   {
     name: "Jack",
     username: "@jack",
-    avatar: "https://avatar.vercel.sh/jack",
+    avatar: "https://randomuser.me/api/portraits/women/4.jpg",
     content: "I've never seen anything like this before. It's amazing. I love it."
   },
   {
     name: "Jill",
     username: "@jill",
-    avatar: "https://avatar.vercel.sh/jill",
+    avatar: "https://randomuser.me/api/portraits/women/6.jpg",
     content: "I don't know what to say. I'm speechless. This is amazing."
   },
   {
     name: "John",
     username: "@john",
-    avatar: "https://avatar.vercel.sh/john",
+    avatar: "https://randomuser.me/api/portraits/women/70.jpg",
     content: "I'm at a loss for words. This is amazing. I love it."
   },
   {
     name: "Jane",
     username: "@jane",
-    avatar: "https://avatar.vercel.sh/jane",
+    avatar: "https://randomuser.me/api/portraits/women/10.jpg",
     content: "I'm at a loss for words. This is amazing. I love it."
   },
   {
     name: "Jenny",
     username: "@jenny",
-    avatar: "https://avatar.vercel.sh/jenny",
+    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
     content: "I'm at a loss for words. This is amazing. I love it."
   },
   {
     name: "James",
     username: "@james",
-    avatar: "https://avatar.vercel.sh/james",
+    avatar: "https://randomuser.me/api/portraits/women/51.jpg",
     content: "I'm at a loss for words. This is amazing. I love it."
   }
 ];
@@ -76,22 +78,24 @@ const Cta = () => {
           </div>
 
           <div className="z-10 mx-auto size-24 rounded-[2rem] border bg-white/10 p-3 shadow-2xl backdrop-blur-md dark:bg-black/10 lg:size-32">
-            <Calendar className="w-auto h-full" />
+            <Image src="/aqua/logo.svg" alt="Aquapulse Logo" width={100} height={100} />
           </div>
 
           <div className="z-10 mt-4 flex flex-col items-center text-center text-black dark:text-white">
-            <h1 className="text-3xl font-bold lg:text-4xl">Cal AI</h1>
-            <p className="mt-2">Smart scheduling powered by AI.</p>
+            <h1 className="text-3xl font-bold lg:text-4xl">
+              Aquapulse
+            </h1>
+            <p className="mt-2">Aquapulse is an aqua-tech company offering tailored solutions and advanced technology to enhance efficiency and sustainability in aquaculture</p>
             <Button
               variant="default"
               size="sm"
-              className="mt-4 rounded-full group"
+              className="mt-4 rounded-full group bg-gradient-to-r from-sky-400 to-blue-600"
               asChild
             >
-              <a href="#">
+              <Link href="/">
                 Get Started
                 <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
-              </a>
+              </Link>
             </Button>
           </div>
 

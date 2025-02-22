@@ -2,8 +2,13 @@ import { Analytics } from "@vercel/analytics/react";
 import classNames from "classnames";
 import type { Metadata } from "next";
 import "./globals.css";
+import { Inter } from "next/font/google";
 import InitialLoadingProvider from "@/components/ui/InitialLoadingProvider";
 
+const inter = Inter({
+  subsets: ["latin"],
+  weight: "600"
+});
 export const metadata: Metadata = {
   title: "NextJs 15",
   description: "Nextjs 15 starter template",
@@ -33,13 +38,13 @@ export default function RootLayout({
       </head>
       {/* //! If you don't want 'screen size' visible at the left bottom of the browser window, You can remove `debug-screens` class */}
       <body
-        className={classNames("antialiased", {
+        className={classNames(`${inter.className} antialiased`, {
           "debug-screens": process.env.NODE_ENV === "development",
         })}
       >
-        <InitialLoadingProvider>
-          {children}
-        </InitialLoadingProvider>
+        {/* <InitialLoadingProvider> */}
+        {children}
+        {/* </InitialLoadingProvider> */}
         <Analytics />
       </body>
     </html>

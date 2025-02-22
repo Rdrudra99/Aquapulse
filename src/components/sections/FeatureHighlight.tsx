@@ -106,7 +106,7 @@ const FeatureHighlight = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-sm text-primary text-balance font-mono font-semibold tracking-wider uppercase"
+            className="text-sm  text-balance font-mono font-semibold tracking-wider uppercase bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent"
           >
             Features
           </motion.h2>

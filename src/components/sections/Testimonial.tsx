@@ -16,7 +16,7 @@ export const Highlight = ({
   return (
     <span
       className={cn(
-        "bg-primary/20 p-1 py-0.5 font-bold text-primary dark:bg-primary/20 dark:text-primary",
+        "bg-sky-400/20 p-1 py-0.5 font-bold text-primary dark:bg-sky-400/20 dark:text-primary",
         className
       )}
     >
@@ -81,186 +81,370 @@ export const TestimonialCard = ({
   </div>
 );
 
+// const testimonials = [
+//   {
+//     name: "Alex Rivera",
+//     role: "CTO at InnovateTech",
+//     img: "https://randomuser.me/api/portraits/men/91.jpg",
+//     description: (
+//       <p>
+//         The tools provided by <strong>#WhyMe</strong> have completely revolutionized our approach to innovation.
+//         <Highlight>
+//           Faster development cycles and streamlined workflows.
+//         </Highlight>{" "}
+//         Essential for any tech-driven company.
+//       </p>
+//     ),
+//   },
+//   {
+//     name: "Samantha Lee",
+//     role: "Marketing Director at NextGen Solutions",
+//     img: "https://randomuser.me/api/portraits/women/12.jpg",
+//     description: (
+//       <p>
+//         <strong>#WhyMe</strong> has transformed our marketing campaigns with data-driven insights.
+//         <Highlight>
+//           We’ve seen significant growth in engagement and ROI.
+//         </Highlight>{" "}
+//         Highly recommended for marketing professionals.
+//       </p>
+//     ),
+//   },
+//   {
+//     name: "Raj Patel",
+//     role: "Founder & CEO at StartUp Grid",
+//     img: "https://randomuser.me/api/portraits/men/45.jpg",
+//     description: (
+//       <p>
+//         Partnering with <strong>#WhyMe</strong> has given us the tools to scale rapidly.
+//         <Highlight>
+//           Their platform has doubled our operational efficiency.
+//         </Highlight>{" "}
+//         A must-have for any growing startup.
+//       </p>
+//     ),
+//   },
+//   {
+//     name: "Emily Chen",
+//     role: "Product Manager at Digital Wave",
+//     img: "https://randomuser.me/api/portraits/women/83.jpg",
+//     description: (
+//       <p>
+//         <strong>#WhyMe</strong> has simplified product management with cutting-edge solutions.
+//         <Highlight>
+//           Collaboration and efficiency are at an all-time high.
+//         </Highlight>{" "}
+//         A game-changer for product teams.
+//       </p>
+//     ),
+//   },
+//   {
+//     name: "Michael Brown",
+//     role: "Data Scientist at FinTech Innovations",
+//     img: "https://randomuser.me/api/portraits/men/1.jpg",
+//     description: (
+//       <p>
+//         The advanced analytics provided by <strong>#WhyMe</strong> have elevated our predictive models.
+//         <Highlight>
+//           Real-time insights are now driving our strategies.
+//         </Highlight>{" "}
+//         Essential for the financial sector.
+//       </p>
+//     ),
+//   },
+//   {
+//     name: "Linda Wu",
+//     role: "VP of Operations at LogiChain Solutions",
+//     img: "https://randomuser.me/api/portraits/women/5.jpg",
+//     description: (
+//       <p>
+//         The operational tools from <strong>#WhyMe</strong> have reduced our costs significantly.
+//         <Highlight>
+//           Precision and efficiency like never before.
+//         </Highlight>{" "}
+//         An invaluable partner for logistics.
+//       </p>
+//     ),
+//   },
+//   {
+//     name: "Carlos Gomez",
+//     role: "Head of R&D at EcoInnovate",
+//     img: "https://randomuser.me/api/portraits/men/14.jpg",
+//     description: (
+//       <p>
+//         Thanks to <strong>#WhyMe</strong>, we’ve integrated sustainable solutions seamlessly into our projects.
+//         <Highlight>
+//           Leading the charge in green technology.
+//         </Highlight>{" "}
+//         A key player in eco-innovation.
+//       </p>
+//     ),
+//   },
+//   {
+//     name: "Aisha Khan",
+//     role: "Chief Marketing Officer at Fashion Forward",
+//     img: "https://randomuser.me/api/portraits/women/56.jpg",
+//     description: (
+//       <p>
+//         <strong>#WhyMe</strong> has revolutionized how we approach trend analysis in fashion.
+//         <Highlight>
+//           Our campaigns are now more impactful and data-driven.
+//         </Highlight>{" "}
+//         A game-changer for fashion marketing.
+//       </p>
+//     ),
+//   },
+//   {
+//     name: "Tom Chen",
+//     role: "Director of IT at HealthTech Solutions",
+//     img: "https://randomuser.me/api/portraits/men/18.jpg",
+//     description: (
+//       <p>
+//         The AI-powered solutions from <strong>#WhyMe</strong> have improved patient care systems dramatically.
+//         <Highlight>
+//           Healthcare and technology in perfect harmony.
+//         </Highlight>{" "}
+//         Transforming the medical industry.
+//       </p>
+//     ),
+//   },
+//   {
+//     name: "Sofia Patel",
+//     role: "CEO at EduTech Innovations",
+//     img: "https://randomuser.me/api/portraits/women/73.jpg",
+//     description: (
+//       <p>
+//         With <strong>#WhyMe</strong>, our learning platforms now deliver personalized education experiences.
+//         <Highlight>
+//           Students are achieving better outcomes than ever before.
+//         </Highlight>{" "}
+//         Transforming education for the future.
+//       </p>
+//     ),
+//   },
+//   {
+//     name: "Jake Morrison",
+//     role: "CTO at SecureNet Tech",
+//     img: "https://randomuser.me/api/portraits/men/25.jpg",
+//     description: (
+//       <p>
+//         <strong>#WhyMe</strong> has set a new standard for data security in the industry.
+//         <Highlight>
+//           Trust and safety are our new cornerstones.
+//         </Highlight>{" "}
+//         Redefining cybersecurity.
+//       </p>
+//     ),
+//   },
+//   {
+//     name: "Nadia Ali",
+//     role: "Product Manager at Creative Solutions",
+//     img: "https://randomuser.me/api/portraits/women/78.jpg",
+//     description: (
+//       <p>
+//         <strong>#WhyMe</strong> has accelerated our creative processes with intuitive tools.
+//         <Highlight>
+//           Innovation and productivity have soared.
+//         </Highlight>{" "}
+//         Perfect for the creative industries.
+//       </p>
+//     ),
+//   },
+//   {
+//     name: "Omar Farooq",
+//     role: "Founder at Startup Hub",
+//     img: "https://randomuser.me/api/portraits/men/54.jpg",
+//     description: (
+//       <p>
+//         The startup insights provided by <strong>#WhyMe</strong> have been crucial for our growth.
+//         <Highlight>
+//           Data-driven decisions are now our foundation.
+//         </Highlight>{" "}
+//         A catalyst for startup success.
+//       </p>
+//     ),
+//   },
+// ];
 const testimonials = [
   {
-    name: "Alex Rivera",
-    role: "CTO at InnovateTech",
-    img: "https://randomuser.me/api/portraits/men/91.jpg",
+    name: "Dr. Priya Sharma",
+    role: "Marine Biologist at Oceanic Research Institute",
+    img: "https://randomuser.me/api/portraits/women/44.jpg",
     description: (
       <p>
-        The tools provided by <strong>#WhyMe</strong> have completely revolutionized our approach to innovation.
+        Collaborating with <strong>Aquapulse</strong> has significantly advanced our research.{" "}
         <Highlight>
-          Faster development cycles and streamlined workflows.
+          Their environmental monitoring tools provide precise data, enhancing our studies on marine ecosystems.
         </Highlight>{" "}
-        Essential for any tech-driven company.
+        A remarkable partner in marine science.
       </p>
     ),
   },
   {
-    name: "Samantha Lee",
-    role: "Marketing Director at NextGen Solutions",
-    img: "https://randomuser.me/api/portraits/women/12.jpg",
+    name: "Arjun Verma",
+    role: "Owner of Verma Aquafarms",
+    img: "https://randomuser.me/api/portraits/men/32.jpg",
     description: (
       <p>
-        <strong>#WhyMe</strong> has transformed our marketing campaigns with data-driven insights.
+        Since integrating <strong>Aquapulse</strong>'s solutions, our farm's productivity has soared.{" "}
         <Highlight>
-          We’ve seen significant growth in engagement and ROI.
+          Post-harvest losses have decreased by 30%, and operational efficiency has improved remarkably.
         </Highlight>{" "}
-        Highly recommended for marketing professionals.
+        Essential for any aquaculture business.
       </p>
     ),
   },
   {
-    name: "Raj Patel",
-    role: "Founder & CEO at StartUp Grid",
-    img: "https://randomuser.me/api/portraits/men/45.jpg",
+    name: "Sneha Patel",
+    role: "Export Manager at FreshSea Ltd.",
+    img: "https://randomuser.me/api/portraits/women/68.jpg",
     description: (
       <p>
-        Partnering with <strong>#WhyMe</strong> has given us the tools to scale rapidly.
+        <strong>Aquapulse</strong> has streamlined our export processes with their market linkage services.{" "}
         <Highlight>
-          Their platform has doubled our operational efficiency.
+          We've expanded into new international markets effortlessly.
         </Highlight>{" "}
-        A must-have for any growing startup.
+        Their expertise is invaluable for export-oriented aquaculture enterprises.
       </p>
     ),
   },
   {
-    name: "Emily Chen",
-    role: "Product Manager at Digital Wave",
-    img: "https://randomuser.me/api/portraits/women/83.jpg",
+    name: "Ravi Kumar",
+    role: "Sustainability Officer at GreenWave Aquatics",
+    img: "https://randomuser.me/api/portraits/men/85.jpg",
     description: (
       <p>
-        <strong>#WhyMe</strong> has simplified product management with cutting-edge solutions.
+        Implementing <strong>Aquapulse</strong>'s environmental management systems has been transformative.{" "}
         <Highlight>
-          Collaboration and efficiency are at an all-time high.
+          Our compliance with environmental regulations is now seamless, and we've achieved multiple certifications.
         </Highlight>{" "}
-        A game-changer for product teams.
+        A must-have for sustainable aquaculture operations.
       </p>
     ),
   },
   {
-    name: "Michael Brown",
-    role: "Data Scientist at FinTech Innovations",
-    img: "https://randomuser.me/api/portraits/men/1.jpg",
+    name: "Anita Desai",
+    role: "Technical Director at BlueFin Hatcheries",
+    img: "https://randomuser.me/api/portraits/women/29.jpg",
     description: (
       <p>
-        The advanced analytics provided by <strong>#WhyMe</strong> have elevated our predictive models.
+        The expert advisory services from <strong>Aquapulse</strong> have elevated our hatchery's success rates.{" "}
         <Highlight>
-          Real-time insights are now driving our strategies.
+          Their technical support is both prompt and insightful, addressing our challenges effectively.
         </Highlight>{" "}
-        Essential for the financial sector.
+        Highly recommended for technical advancements in aquaculture.
       </p>
     ),
   },
   {
-    name: "Linda Wu",
-    role: "VP of Operations at LogiChain Solutions",
-    img: "https://randomuser.me/api/portraits/women/5.jpg",
+    name: "Vikram Singh",
+    role: "Operations Manager at AquaHarvest Inc.",
+    img: "https://randomuser.me/api/portraits/men/47.jpg",
     description: (
       <p>
-        The operational tools from <strong>#WhyMe</strong> have reduced our costs significantly.
+        Partnering with <strong>Aquapulse</strong> has optimized our supply chain.{" "}
         <Highlight>
-          Precision and efficiency like never before.
+          We've reduced waste and improved delivery times, leading to increased customer satisfaction.
         </Highlight>{" "}
-        An invaluable partner for logistics.
+        A strategic ally in aquaculture logistics.
       </p>
     ),
   },
   {
-    name: "Carlos Gomez",
-    role: "Head of R&D at EcoInnovate",
-    img: "https://randomuser.me/api/portraits/men/14.jpg",
+    name: "Meera Nair",
+    role: "Quality Assurance Lead at SeaFresh Co.",
+    img: "https://randomuser.me/api/portraits/women/53.jpg",
     description: (
       <p>
-        Thanks to <strong>#WhyMe</strong>, we’ve integrated sustainable solutions seamlessly into our projects.
+        <strong>Aquapulse</strong>'s compliance support has been invaluable.{" "}
         <Highlight>
-          Leading the charge in green technology.
+          Navigating regulatory requirements is now straightforward, ensuring our products meet international standards.
         </Highlight>{" "}
-        A key player in eco-innovation.
+        An essential service for quality-focused businesses.
       </p>
     ),
   },
   {
-    name: "Aisha Khan",
-    role: "Chief Marketing Officer at Fashion Forward",
-    img: "https://randomuser.me/api/portraits/women/56.jpg",
+    name: "Suresh Iyer",
+    role: "Founder & CEO at AquaInnovate Pvt. Ltd.",
+    img: "https://randomuser.me/api/portraits/men/60.jpg",
     description: (
       <p>
-        <strong>#WhyMe</strong> has revolutionized how we approach trend analysis in fashion.
+        The virtual farming solutions from <strong>Aquapulse</strong> have revolutionized our operations.{" "}
         <Highlight>
-          Our campaigns are now more impactful and data-driven.
+          Real-time monitoring and data analytics have led to informed decision-making and increased yields.
         </Highlight>{" "}
-        A game-changer for fashion marketing.
+        A technological leap for modern aquaculture.
       </p>
     ),
   },
   {
-    name: "Tom Chen",
-    role: "Director of IT at HealthTech Solutions",
-    img: "https://randomuser.me/api/portraits/men/18.jpg",
+    name: "Lakshmi Menon",
+    role: "Head of Research at Marine Solutions",
+    img: "https://randomuser.me/api/portraits/women/34.jpg",
     description: (
       <p>
-        The AI-powered solutions from <strong>#WhyMe</strong> have improved patient care systems dramatically.
+        Collaborating with <strong>Aquapulse</strong> has provided us with cutting-edge tools for environmental monitoring.{" "}
         <Highlight>
-          Healthcare and technology in perfect harmony.
+          Their technology is integral to our research on sustainable aquaculture practices.
         </Highlight>{" "}
-        Transforming the medical industry.
+        A forward-thinking partner in marine research.
       </p>
     ),
   },
   {
-    name: "Sofia Patel",
-    role: "CEO at EduTech Innovations",
-    img: "https://randomuser.me/api/portraits/women/73.jpg",
+    name: "Amitabh Roy",
+    role: "Chief Financial Officer at OceanDelights Ltd.",
+    img: "https://randomuser.me/api/portraits/men/22.jpg",
     description: (
       <p>
-        With <strong>#WhyMe</strong>, our learning platforms now deliver personalized education experiences.
+        <strong>Aquapulse</strong>'s market insights have been a game-changer for our export strategies.{" "}
         <Highlight>
-          Students are achieving better outcomes than ever before.
+          We've tapped into new markets with confidence, boosting our revenue streams.
         </Highlight>{" "}
-        Transforming education for the future.
+        Their expertise is a valuable asset for any seafood exporter.
       </p>
     ),
   },
   {
-    name: "Jake Morrison",
-    role: "CTO at SecureNet Tech",
-    img: "https://randomuser.me/api/portraits/men/25.jpg",
+    name: "Pooja Reddy",
+    role: "Aquaculture Specialist at AquaSphere Enterprises",
+    img: "https://randomuser.me/api/portraits/women/40.jpg",
     description: (
       <p>
-        <strong>#WhyMe</strong> has set a new standard for data security in the industry.
+        The training programs offered by <strong>Aquapulse</strong> have upskilled our team effectively.{" "}
         <Highlight>
-          Trust and safety are our new cornerstones.
+          We're now better equipped to manage challenges and implement innovative solutions in our operations.
         </Highlight>{" "}
-        Redefining cybersecurity.
+        A commendable commitment to industry education.
       </p>
     ),
   },
   {
-    name: "Nadia Ali",
-    role: "Product Manager at Creative Solutions",
-    img: "https://randomuser.me/api/portraits/women/78.jpg",
+    name: "Rahul Chatterjee",
+    role: "Logistics Coordinator at FishFleet Pvt. Ltd.",
+    img: "https://randomuser.me/api/portraits/men/36.jpg",
     description: (
       <p>
-        <strong>#WhyMe</strong> has accelerated our creative processes with intuitive tools.
+        <strong>Aquapulse</strong> has transformed our logistics with their supply chain optimization services.{" "}
         <Highlight>
-          Innovation and productivity have soared.
+          We've seen a 25% reduction in transit times and improved product freshness upon delivery.
         </Highlight>{" "}
-        Perfect for the creative industries.
+        Indispensable for efficient distribution.
       </p>
     ),
   },
   {
-    name: "Omar Farooq",
-    role: "Founder at Startup Hub",
-    img: "https://randomuser.me/api/portraits/men/54.jpg",
+    name: "Neha Gupta",
+    role: "Environmental Analyst at BlueWater Corp.",
+    img: "https://randomuser.me/api/portraits/women/50.jpg",
     description: (
       <p>
-        The startup insights provided by <strong>#WhyMe</strong> have been crucial for our growth.
+        The sustainability initiatives guided by <strong>Aquapulse</strong> have aligned our operations with global environmental standards.{" "}
         <Highlight>
-          Data-driven decisions are now our foundation.
+          Our eco-friendly practices have been recognized industry-wide.
         </Highlight>{" "}
-        A catalyst for startup success.
+        A trusted partner in promoting green aquaculture.
       </p>
     ),
   },

@@ -9,26 +9,31 @@ import {
 
 const faqItems = [
   {
-    question: "How does AI improve my scheduling?",
-    answer: "Our AI analyzes your scheduling patterns, preferences, and priorities to automatically optimize your calendar. It learns from your behavior to suggest the best times for meetings and helps prevent scheduling conflicts."
+    question: "What makes Aquapulse a unique investment opportunity?",
+    answer: "Aquapulse is a pioneering aqua-tech company revolutionizing aquaculture through sustainable practices, advanced technology, and expert advisory services. With a team of industry-leading professionals, we focus on efficient resource use and modernizing the aquaculture industry, making it a unique and impactful investment opportunity."
   },
   {
-    question: "Can I integrate Cal AI with other apps?",
-    answer: "Yes, Cal AI seamlessly integrates with popular calendar apps, productivity tools, and communication platforms. This ensures a smooth workflow across all your digital tools."
+    question: "How does Aquapulse ensure the sustainability of its operations?",
+    answer: "We prioritize sustainable practices by utilizing advanced technologies to minimize post-harvest losses, optimize resource utilization, and maintain environmental stewardship, ensuring the long-term viability of aquaculture ecosystems."
   },
   {
-    question: "How does the team collaboration feature work?",
-    answer: "Team collaboration allows you to share calendars, set group availability, and coordinate schedules effortlessly. The AI helps find optimal meeting times that work for all participants."
+    question: "What services does Aquapulse offer to farmers?",
+    answer: "Aquapulse provides tailored solutions and advanced technology to minimize post-harvest losses, enhance efficiency, and promote sustainability in aquaculture. Our services include supply chain optimization, market linkage and export facilitation, regulatory compliance support, environmental monitoring, expert advisory, and virtual farming assistance."
   },
   {
-    question: "Is my data secure with Cal AI?",
-    answer: "We prioritize your data security with enterprise-grade encryption, secure authentication, and strict privacy controls. Your scheduling data is protected according to industry best practices."
+    question: "How can input dealers benefit from partnering with Aquapulse?",
+    answer: "Input dealers collaborating with Aquapulse gain access to a network of aquaculture professionals and farmers, facilitating the distribution of sustainable and efficient aquaculture inputs. Our platform enhances market reach and provides opportunities for business growth."
   },
   {
-    question: "Can I use Cal AI offline?",
-    answer: "While some features require internet connectivity, Cal AI includes offline capabilities for basic scheduling functions. Your data syncs automatically when you're back online."
+    question: "What support does Aquapulse offer for export management?",
+    answer: "Aquapulse assists clients in navigating international markets by offering market linkage and export facilitation services. We ensure compliance with global standards, streamline supply chains, and provide insights into market trends to help businesses expand globally."
+  },
+  {
+    question: "Is my data secure with Aquapulse?",
+    answer: "We prioritize your data security with enterprise-grade encryption, secure authentication, and strict privacy controls. Your information is protected according to industry best practices."
   }
 ];
+
 
 export default function Faq() {
   return (

@@ -11,7 +11,7 @@ const FeatureScroll = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-sm text-primary text-balance font-mono font-semibold tracking-wider uppercase"
+            className="text-sm  text-balance font-mono font-semibold tracking-wider uppercase bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent"
           >
             Experience
           </motion.h2>
@@ -26,10 +26,14 @@ const FeatureScroll = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mx-auto select-none">
-          {[6, 7, 8].map((num, index) => (
+          {[
+            "/aqua/2.png",
+            "/aqua/1.png",
+            "/aqua/5.png",
+          ].map((num, index) => (
             <motion.img
               key={num}
-              src={`https://mobile-magicui.vercel.app/Device-${num}.png`}
+              src={num}
               alt={`iPhone ${index + 1}`}
               initial={{ y: 150 + (index * 50) }}
               whileInView={{ y: 0 }}

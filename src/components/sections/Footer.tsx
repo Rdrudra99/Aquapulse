@@ -1,95 +1,92 @@
-import Link from "next/link";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
-import { Twitter, Youtube, ChevronRight, Calendar } from "lucide-react";
-
-const footerData = {
-  product: {
-    title: "Product",
-    links: [
-      { text: "Features", href: "/features" },
-      { text: "Pricing", href: "/pricing" },
-    ],
-  },
-  company: {
+import Link from "next/link";
+const sections = [
+  {
     title: "Company",
     links: [
-      { text: "About Us", href: "/about" },
-      { text: "Blog", href: "/blog" },
+      { name: "About Us", href: "/about" },
+      { name: "Contact", href: "/contact" },
+      { name: "FAQs", href: "/faqs" },
+      { name: "Recognitions", href: "/recognitions" },
     ],
   },
-  resources: {
-    title: "Resources",
-    links: [
-      { text: "Contact", href: "/contact" },
-      { text: "Support", href: "/support" },
-    ],
-  },
-  social: {
-    title: "Social",
-    links: [
-      { text: "Twitter", href: "https://twitter.com", icon: <Twitter className="h-4 w-4" /> },
-      { text: "Youtube", href: "https://youtube.com", icon: <Youtube className="h-4 w-4" /> },
-    ],
-  },
+];
+
+const Footer = () => {
+  return (
+    <div className="container mx-auto">
+      <footer className="py-8">
+        <div className="flex flex-col items-center space-y-8">
+          {/* Logo and Tagline */}
+          <div className="text-center">
+            <Link href="/" className="inline-flex items-center gap-2">
+              <Image src="/aqua/logo.svg" alt="logo" width={32} height={16} />
+              <span className="text-lg">Aquapulse</span>
+            </Link>
+            <p className="mt-3 text-sm text-muted-foreground max-w-md">
+              Driving Innovation in Sustainable Seafood for a Thriving Blue Food Economy
+            </p>
+          </div>
+
+          {/* App Store Badges */}
+          <div className="flex gap-4">
+            <Link href="https://apps.apple.com/in/app/aquapulse/id6605928392" className="transition-opacity hover:opacity-80" target="_blank">
+              <Image
+                src="/aqua/appstore.svg"
+                alt="Download on App Store"
+                width={120}
+                height={40}
+              />
+            </Link>
+            <Link href="https://play.google.com/store/apps/details?id=org.aquapulse&hl=en" className="transition-opacity hover:opacity-80" target="_blank">
+              <Image
+                src="/aqua/playstore.svg"
+                alt="Get it on Google Play"
+                width={135}
+                height={40}
+              />
+            </Link>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            {sections[0].links.map((link, idx) => (
+              <Link
+                key={idx}
+                href={link.href}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* Social Links */}
+          <div className="flex space-x-6 text-muted-foreground">
+            <Link href="https://www.facebook.com/people/Aquapulse/61569414757437/" target="_blank" className="hover:text-primary">
+              <FaFacebook className="size-5" />
+            </Link>
+            <Link href="https://x.com/Aquapulse_asia" target="_blank" className="hover:text-primary">
+              <FaTwitter className="size-5" />
+            </Link>
+            <Link href="https://www.linkedin.com/company/aquapulse-asia/" target="_blank" className="hover:text-primary">
+              <FaLinkedin className="size-5" />
+            </Link>
+          </div>
+
+          {/* Copyright and Legal */}
+          <div className="text-center text-sm text-muted-foreground">
+            <p className="mb-2">© {new Date().getFullYear()} Aquapulse. All rights reserved.</p>
+            <div className="flex justify-center gap-4">
+              <Link href="#" className="hover:text-primary">Terms</Link>
+              <Link href="#" className="hover:text-primary">Privacy</Link>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 };
 
-export default function Footer() {
-  return (
-    <footer>
-      <div className="max-w-6xl mx-auto py-16 sm:px-10 px-5 pb-0">
-        <Link
-          href="/"
-          title="brand-logo"
-          className="relative mr-6 flex items-center space-x-2 hover:opacity-80 transition-opacity"
-        >
-          <Calendar className="w-6 h-6" />
-          <span className="font-bold text-xl">Cal AI</span>
-        </Link>
-
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 mt-8">
-          {Object.values(footerData).map((section, index) => (
-            <div key={index} className="mb-5">
-              <h2 className="font-semibold">{section.title}</h2>
-              <ul>
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex} className="my-2">
-                    <Link
-                      href={link.href}
-                      className="group inline-flex cursor-pointer items-center justify-start gap-1 text-muted-foreground duration-200 hover:text-foreground hover:opacity-90"
-                    >
-                      {'icon' in link && link.icon}
-                      {link.text}
-                      <ChevronRight className="h-4 w-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className="max-w-6xl mx-auto border-t py-2 grid md:grid-cols-2 h-full justify-between w-full grid-cols-1 gap-1">
-          <span className="text-sm tracking-tight text-foreground">
-            Copyright © {new Date().getFullYear()}{" "}
-            <Link href="/" className="cursor-pointer">
-              WhyMe
-            </Link>{" "}
-            - WhyMe is a cutting-edge AI content generation platform that revolutionizes content creation for businesses, marketers, and creators. Our advanced AI technology produces high-quality, SEO-optimized content for blogs, social media, product descriptions, and more. Boost your productivity and enhance your online presence with WhyMe's intelligent writing solutions.
-          </span>
-          <ul className="flex justify-start md:justify-end text-sm tracking-tight text-foreground">
-            <li className="mr-3 md:mx-4">
-              <Link href="/privacy" target="_blank" rel="noopener noreferrer">
-                Privacy Policy
-              </Link>
-            </li>
-            <li className="mr-3 md:mx-4">
-              <Link href="/terms" target="_blank" rel="noopener noreferrer">
-                Terms of Service
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-  );
-}
+export default Footer;
