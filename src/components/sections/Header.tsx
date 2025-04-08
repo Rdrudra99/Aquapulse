@@ -15,7 +15,7 @@ const Header = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const navItems = [
-    { label: "Blog", href: "/blog" },
+    { label: "Blog", href: "/" },
     { label: 'About Us', href: '/about-us' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Contact', href: '/contact' },
