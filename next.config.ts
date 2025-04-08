@@ -22,7 +22,16 @@ const nextConfig: NextConfig = withPWA({
       },
       {
         hostname: "randomuser.me",
-      }
+      },
+      {
+        hostname: "images.unsplash.com",
+      },
+      {
+        hostname: "avatars.githubusercontent.com",
+      },
+      {
+        hostname: "images.ctfassets.net",
+      },
     ],
   },
 });

@@ -5,13 +5,16 @@ const sections = [
   {
     title: "Company",
     links: [
-      { name: "About Us", href: "/about" },
-      { name: "Contact", href: "/contact" },
-      { name: "FAQs", href: "/faqs" },
-      { name: "Recognitions", href: "/recognitions" },
+      { name: "Blog", href: "/blog" },
+      { name: 'About Us', href: '/about-us' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Privacy Policy', href: '/privacy-policy' },
+      { name: 'Terms & Conditions', href: '/terms-conditions' },
     ],
   },
 ];
+
 
 const Footer = () => {
   return (
