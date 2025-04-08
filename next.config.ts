@@ -1,39 +1,23 @@
-/* eslint-disable */
-import type { NextConfig } from "next";
-
-const runtimeCaching = require("next-pwa/cache");
-const withPWA = require("next-pwa")({
-  dest: "public",
-  register: true,
-  skipWaiting: true,
-  runtimeCaching,
-  disable: process.env.NODE_ENV === "development",
-});
-
-const nextConfig: NextConfig = withPWA({
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   eslint: {
-    dirs: ["src"],
     ignoreDuringBuilds: true,
   },
   images: {
-    remotePatterns: [
-      {
-        hostname: "mobile-magicui.vercel.app",
-      },
-      {
-        hostname: "randomuser.me",
-      },
-      {
-        hostname: "images.unsplash.com",
-      },
-      {
-        hostname: "avatars.githubusercontent.com",
-      },
-      {
-        hostname: "images.ctfassets.net",
-      },
+    domains: [
+      // Add any domains you need to fetch images from
+      'cdn.sanity.io',
+      'images.unsplash.com',
+      'randomuser.me',
+      'html.tailus.io',
+      'framerusercontent.com',
+      'aximo-tailwind.netlify.app',
     ],
   },
-});
+  env: {
+    // Make sure your base URL is properly set
+    NEXT_PUBLIC_DOMAIN: process.env.NEXT_PUBLIC_DOMAIN || 'https://www.aquapulse.co.in',
+  },
+};
 
-export default nextConfig;
+module.exports = nextConfig;
