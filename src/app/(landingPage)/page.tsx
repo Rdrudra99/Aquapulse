@@ -1,3 +1,5 @@
+
+import FeaturesSection from "@/components/features-8";
 import Benefits from "@/components/sections/Benefits";
 import BentoSection from "@/components/sections/BentoSection";
 import ContactSection from "@/components/sections/contact";
@@ -18,7 +20,8 @@ export default function Home() {
       <Stats />
       <FeatureScroll />
       <FeatureHighlight />
-      <BentoSection />
+      {/* <BentoSection /> */}
+      <FeaturesSection />
       <Benefits />
       <Features />
       <Faq />

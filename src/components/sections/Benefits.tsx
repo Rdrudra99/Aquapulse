@@ -15,22 +15,23 @@ interface BenefitCardProps {
 
 const benefits = [
   {
-    image: "https://mobile-magicui.vercel.app/Device-6.png",
-    title: "Save hours each week with AI-optimized scheduling."
+    image: "/aqua/3.png",
+    title: "Real-time weather forecasts and tithi updates."
   },
   {
-    image: "https://mobile-magicui.vercel.app/Device-7.png",
-    title: "Reduce scheduling conflicts and double-bookings."
+    image: "/aqua/2.png",
+    title: "Access real-time market price trends and analytics"
   },
   {
-    image: "https://mobile-magicui.vercel.app/Device-8.png",
-    title: "Improve work-life balance with smart time allocation."
+    image: "/aqua/4.png",
+    title: "Seamless trade of your harvest at competitive prices"
   },
   {
-    image: "https://mobile-magicui.vercel.app/Device-1.png",
-    title: "Increase productivity with AI-driven time management insights."
-  }
+    image: "/aqua/1.png",
+    title: "Connect with industry experts for personalized advice"
+  },
 ];
+
 
 const BenefitCard = ({ image, title }: BenefitCardProps) => {
   return (
@@ -71,7 +72,9 @@ export default function Benefits() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mx-auto mt-4 max-w-lg text-4xl md:text-5xl lg:text-6xl text-balance font-bold leading-[1.2] tracking-tighter text-foreground lowercase"
           >
-            What you can do with Cal AI
+            What You Can Do with <span className="bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
+              AquaPulse
+            </span>
           </motion.h3>
         </div>
 
