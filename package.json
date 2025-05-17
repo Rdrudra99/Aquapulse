@@ -1,7 +1,7 @@
 {
-  "name": "@bhanu1776/nextjs-starter",
+  "name": "aquapulse",
   "version": "3.1.7",
-  "author": "bhanu1776",
+  "author": "Rdrudra99",
   "license": "MIT",
   "bin": "./bin/cli.js",
   "scripts": {
@@ -78,28 +78,5 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.17",
     "typescript": "5.7.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Bhanu1776/Nextjs14-Starter-Template"
-  },
-  "publishConfig": {
-    "@bhanu1776:registry": "https://npm.pkg.github.com"
-  },
-  "homepage": "https://starter-website-sigma.vercel.app/",
-  "keywords": [
-    "react",
-    "next",
-    "nextjs",
-    "typescript",
-    "tailwind",
-    "template",
-    "starter",
-    "css-modules",
-    "eslint",
-    "prettier",
-    "cz-git",
-    "PWA",
-    "pnpm"
-  ]
+  }
 }

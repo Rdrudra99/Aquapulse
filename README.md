@@ -1,228 +1,158 @@
-// "use client"
-// import { motion } from "framer-motion";
-// import { Calendar } from "lucide-react";
-// import Link from "next/link";
+# Aquapulse - Revolutionizing Sustainable Aquaculture
 
-// const Hero = () => {
-//   const devices = [1, 2, 3, 4, 5];
-//   const getYOffset = (index: number) => {
-//     if (index === 0 || index === 4) return 100;
-//     if (index === 1 || index === 3) return 50;
-//     return 0;
-//   };
+<div align="center">
+  <img src="./public/aqua/logo.svg" alt="Aquapulse Logo" width="300"/>
+  <p><i>Driving Innovation in Sustainable Seafood for a Thriving Blue Food Economy</i></p>
+  
+  [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://aquapulsedemo.vercel.app/)
+  [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?style=for-the-badge&logo=github)](https://github.com/Rdrudra99/aquapulse)
+  [![App Store](https://img.shields.io/badge/App_Store-Download-blue?style=for-the-badge&logo=apple)](https://apps.apple.com/in/app/aquapulse/id6605928392)
+  [![Play Store](https://img.shields.io/badge/Google_Play-Download-green?style=for-the-badge&logo=google-play)](https://play.google.com/store/apps/details?id=org.aquapulse&hl=en)
+</div>
 
-//   return (
-//     <div className="relative flex max-w-7xl rounded-b-3xl my-2 md:my-20 mx-auto flex-col items-center justify-center pt-32 overflow-hidden px-4  bg-gradient-to-t from-[rgba(247,135,67,1)] via-[rgba(255,244,239,1)] to-[rgba(255,255,255,1)]">
-//       {/* Background Circles */}
-//       <div className="absolute inset-0 z-0 flex items-center justify-center">
-//         <motion.div
-//           className="absolute z-0 rounded-full border border-white/30"
-//           style={{ width: '1400px', height: '1400px' }}
-//         />
-//         <motion.div
-//           className="absolute z-0 rounded-full border border-white"
-//           style={{
-//             width: '1100px',
-//             height: '1100px',
-//             clipPath: 'circle(50% at 50% 50%)',
-//             background: 'radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 20%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,0) 60%)'
-//           }}
-//           animate={{
-//             translateY: [-5, 5],
-//             scale: [1, 1.02]
-//           }}
-//           transition={{
-//             duration: 2,
-//             repeat: Infinity,
-//             repeatType: "reverse"
-//           }}
-//         />
-//         <motion.div
-//           className="absolute bg-white/5 z-2 rounded-full border border-[rgba(255,255,255,0.1)] shadow-[0_0_200px_80px_rgba(255,255,255,0.1)]"
-//           style={{ width: '800px', height: '800px' }}
-//           animate={{
-//             translateY: [-8, 8],
-//             scale: [1, 1.03]
-//           }}
-//           transition={{
-//             duration: 2.5,
-//             repeat: Infinity,
-//             repeatType: "reverse"
-//           }}
-//         />
-//       </div>
+## About Aquapulse
 
-//       {/* Content */}
-//       <div className="text-balance relative z-20 mx-auto mb-4 max-w-6xl text-center text-4xl font-semibold tracking-tight text-gray-700 md:text-7xl">
-//         <h2 className="inline-block bg-gradient-to-b from-[rgba(94,94,94,1)] to-[rgba(0,0,0,1)] bg-clip-text text-transparent">
-//           Effortless{" "}
-//           <span className="bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
-//             Aquaculture
-//           </span>
-//         </h2>
-//         <h2 className="inline-block bg-gradient-to-b from-[rgba(94,94,94,1)] to-[rgba(0,0,0,1)] bg-clip-text text-transparent py-2">
-//           That Makes{" "}
-//           <span className="bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
-//             Sustainability Simple
-//           </span>
-//         </h2>
-//       </div>
+Aquapulse is a pioneering aqua-tech company dedicated to revolutionizing aquaculture through sustainable practices, advanced technology, and expert advisory services. We empower aquafarmers, input dealers, and exporters with end-to-end solutions that enhance productivity, efficiency, and sustainability across the entire aquaculture ecosystem.
 
+### Our Vision
 
+To be a global leader in sustainable aquaculture, driving innovation and excellence to ensure the highest quality seafood while preserving and enhancing aquatic ecosystems for future generations.
 
+### Our Mission
 
+Our mission at Aquapulse is to revolutionize the aquaculture industry by integrating advanced technologies and sustainable practices. We aim to:
 
-//       <motion.p
-//         className="relative z-20 mx-auto mt-4 max-w-2xl px-4 text-center text-base/6 text-gray-600 sm:text-base"
-//         initial={{ opacity: 0, y: 20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.6, delay: 0.2 }}
-//       >
-//         Manage aquaculture effortlessly. Optimize operations, reduce waste, and enhance sustainability with cutting-edge AI solutions from Aquapulse
-//       </motion.p>
+- **Innovate:** Develop and implement cutting-edge solutions, such as AI and expert systems, to enhance productivity and sustainability.
+- **Support:** Provide comprehensive support and advisory services to aqua farmers and input dealers, ensuring efficient operations and regulatory compliance.
+- **Sustain:** Promote environmentally responsible practices that minimize post-harvest losses and ensure the long-term viability of aquatic ecosystems.
+- **Connect:** Facilitate market linkages and export opportunities to empower farmers and strengthen the industry's economic foundations.
+- **Lead:** Set new standards in aquaculture through continuous improvement, collaboration, and commitment to excellence.
 
-//       <motion.div
-//         className="mb-8 mt-6 z-10 sm:mb-10 sm:mt-8 flex w-full flex-col items-center justify-center gap-4 px-4 sm:px-8 sm:flex-row md:mb-20"
-//         initial={{ opacity: 0, y: 20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.6, delay: 0.4 }}
-//       >
-//         <Link
-//           href="/login"
-//           className="px-4 py-2 text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 rounded-[6px] bg-[linear-gradient(181deg,_#5E5E5E_18.12%,_#000_99.57%)] shadow-[0px_4px_8px_0px_rgba(3,_7,_18,_0.06),_0px_2px_4px_0px_rgba(3,_7,_18,_0.06),_0px_0px_0px_1px_rgba(3,_7,_18,_0.08),_0px_1px_1px_2px_rgba(255,_255,_255,_0.40)_inset,_0px_-1px_5px_2px_rgba(255,_255,_255,_0.40)_inset] text-white w-full sm:w-40 h-12 flex items-center justify-center"
-//         >
-//           Get Started
-//         </Link>
-//       </motion.div>
+## Our Impact
 
-//       {/* Phone Mockup Component would go here */}
-//       <div className="pt-[2rem] w-full min-h-[21rem] relative">
-//         <div className="relative w-full max-w-[320px] mx-auto">
-//           <img
-//             src="/aqua/crop.png"
-//             alt="Aquapulse App Mockup"
-//             className="w-full h-auto object-contain"
-//             loading="lazy"
-//           />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
+<div align="center">
 
-// export default Hero;
+| Metric | Count | Description |
+|--------|-------|-------------|
+| ♂ AQUAFARMERS | 3,175 | Male farmers actively engaged in sustainable aquaculture practices |
+| ♀ AQUAFARMERS | 2,791 | Female farmers contributing to aquaculture development |
+| ♂ AQUAPRENEURS | 32 | Male entrepreneurs leading aquaculture businesses |
+| ♀ AQUAPRENEURS | 23 | Female entrepreneurs driving innovation in aquaculture |
+| AREA UNDER SUSTAINABLE AQUACULTURE | 20,485 | Total area in acres dedicated to sustainable practices |
+| VILLAGES COVERED | 84 | Rural communities benefiting from our aquaculture initiatives |
+| COASTLINE COVERED | 287 | Kilometers of coastline under sustainable management |
 
+</div>
 
-"use client"
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { ArrowUpRight, ChevronRight } from "lucide-react";
+## Key Features
 
-const devices = [
-  "/aqua/3.png",
-  "/aqua/2.png",
-  "/aqua/4.png",
-  "/aqua/1.png",
-  "/aqua/5.png",
-];
+### For Aquafarmers
 
-const getYOffset = (index: number) => {
-  if (index === 0 || index === 4) return 100;
-  if (index === 1 || index === 3) return 50;
-  return 0;
-};
+- **Real-time Weather Forecasts & Tithi Updates**  
+  Access critical environmental data to better plan farming activities.
 
-const Hero = () => {
-  return (
-    <section className="relative pb-32 overflow-hidden md:pt-40 pt-40">
-      {/* Background gradient */}
-      <div className="absolute top-0 -z-10 h-full w-full bg-white">
-        <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-gradient-to-r from-sky-400 to-blue-600 opacity-20 blur-[80px]" />
-      </div>
+- **Market Price Trends & Analytics**  
+  Make informed decisions with real-time market intelligence.
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          {/* New badge */}
-          <Link
-            href="/"
-            className="inline-flex items-center rounded-full gap-2 px-4 py-2 mb-8  bg-[#F9FAFB] border border-[rgba(104,104,129,0.1)] hover:bg-gray-50 transition-colors"
-          >
-            <span className="px-3 py-1 text-sm text-white bg-gradient-to-r from-sky-400 to-blue-600 rounded-full">
-              New
-            </span>
-            <span className="text-gray-600">Your Partner in Blue Revolution</span>
-            <ChevronRight className="w-5 h-5 text-gray-600" />
-          </Link>
+- **Seamless Harvest Trade**  
+  Connect directly with buyers to sell your harvest at competitive prices.
 
-          {/* Main heading */}
-          <motion.h1
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Aquaculture Reinvented
-            <br />
-            <span className="bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">AquaPulse</span>   App
-          </motion.h1>
+- **Expert Advisory Services**  
+  Get personalized advice from industry experts for optimal farm management.
 
-          {/* Subheading */}
-          <motion.p
-            className="max-w-2xl mx-auto text-lg text-gray-600 mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            Empowering you to take charge of your financial future with intuitive tools and personalized insights.
-          </motion.p>
+### Comprehensive Solutions
 
-          {/* CTA Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <Link
-              href="https://play.google.com/store/apps/details?id=org.aquapulse&hl=en"
-              target="_blank"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-black text-white rounded-full border-2 border-black hover:bg-gray-900 transition-colors"
-            >
-              <span className="font-semibold">Get AquaPulse App</span>
-              <div className="p-1 border border-white/20 rounded-full">
-                <ArrowUpRight className="w-4 h-4" />
-              </div>
-            </Link>
-            <Link
-              href="#features"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black rounded-full border-2 border-black hover:bg-gray-50 transition-colors"
-            >
-              <span className="font-semibold">Explore Features</span>
-            </Link>
-          </motion.div>
-        </div>
-        <div className="flex flex-nowrap items-center justify-center gap-4 sm:gap-8 h-auto sm:h-[500px] select-none md:mt-15 mt-10">
-          {devices.map((device, index) => (
-            <motion.img
-              key={device}
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: getYOffset(index) }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{
-                duration: 0.8,
-                delay: 0.2 * index,
-                type: "spring",
-                stiffness: 50
-              }}
-              src={device}
-              alt="iPhone"
-              className="w-40 sm:w-64 h-[333px] sm:h-[500px] flex-shrink-0"
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+- **Sustainable Water Management**  
+  Implementing eco-friendly water recycling and filtration systems to minimize environmental impact.
 
-export default Hero;
+- **Advanced Fish Health Monitoring**  
+  Utilizing IoT devices and AI analytics to monitor fish health in real-time, ensuring optimal growth conditions.
+
+- **Eco-Friendly Feed Solutions**  
+  Developing and providing sustainable feed options that promote healthy aquaculture ecosystems.
+
+- **Data-Driven Farm Management**  
+  Offering analytics platforms that help farmers make informed decisions to maximize yield and efficiency.
+
+- **Expert Advisory Services**  
+  Providing guidance on best practices, regulatory compliance, and innovative techniques in aquaculture.
+
+- **Global Market Access**  
+  Assisting clients in navigating international markets to expand their aquaculture businesses globally.
+
+## Technology Stack
+
+- **Frontend**: Next.js, React, TypeScript
+- **Styling**: Tailwind CSS
+- **Animation**: Framer Motion
+- **UI Components**: Radix UI
+- **Deployment**: Vercel
+
+## Mobile Apps
+
+Experience Aquapulse on the go with our mobile applications:
+
+- [Download on App Store](https://apps.apple.com/in/app/aquapulse/id6605928392)
+- [Get it on Google Play](https://play.google.com/store/apps/details?id=org.aquapulse&hl=en)
+
+## Our Team
+
+Aquapulse is built by a dedicated team of professionals committed to transforming aquaculture:
+
+- **Ananya Mohapatra** - Founder
+- **Abhishek Dwivedy** - Co-Founder & CEO
+- **Abhilash Dwivedy** - Chief Growth Officer
+- **Rupak Kumar Jena** - Area Sales Manager
+- **Jyotirmayee Moharana** - Manager Fintech
+- And many more talented individuals driving our mission forward!
+
+## Getting Started with Development
+
+### Prerequisites
+
+- Node.js (v18 or later)
+- pnpm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Rdrudra99/aquapulse.git
+cd aquapulse
+
+# Install dependencies
+pnpm install
+
+# Start the development server
+pnpm dev
+```
+
+### Building for Production
+
+```bash
+# Build the application
+pnpm build
+
+# Start the production server
+pnpm start
+```
+
+## Contributing
+
+We welcome contributions to improve Aquapulse! Please feel free to submit issues, feature requests, or pull requests to help us enhance the platform.
+
+## Contact Us
+
+- **Email**: [contactus@aquapulse.co.in](mailto:contactus@aquapulse.co.in)
+- **Toll-Free**: 1800 891 0550
+- **Headquarters**: Bhubaneswar, Odisha, India
+
+## License
+
+This project is licensed under the terms of the license included in the repository.
+
+## Connect With Us
+
+- [LinkedIn](https://www.linkedin.com/company/aquapulse-asia/)
+- [Twitter](https://twitter.com/Aquapulse_asia)
+- [Facebook](https://www.facebook.com/people/Aquapulse/61569414757437/)
